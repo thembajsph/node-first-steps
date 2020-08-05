@@ -22,4 +22,4 @@ console.log(styledMessage)
 // const greet = require('../greet');
 
 // const styledMessage = figlet.bgGreen.byGreen(greet('Xola'));
-// console.log(styledMessage)
+// console.log(styledMessage);
