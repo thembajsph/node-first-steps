@@ -1,25 +1,21 @@
-//# 1
-//import the greet module that is in the current folder
-// const greet = require('./greet');
 
-// console.log(greet('Xola'));
-
-
-
-// #chalk module
-
-const chalk = require('chalk');
-//import the greet module that is in the current folder
 const greet = require('./greet');
+const chalk = require('chalk');
 
-const styledMessage = chalk.bgGreen.black(greet('Xola'));
-console.log(styledMessage)
+var figlet = require('figlet');
 
-// #figlet
+//calling figlet with chalk, data is containing figlet, you have already
+figlet(greet('Xola'), function (err, data) {
+    if (err) {
+        console.log('Something went wrong...');
+        console.dir(err);
+        return;
+    }
 
-// const figlet = require('figlet');
-// //import the greet module that is in the current folder
-// const greet = require('../greet');
+//colour figlet using chalk
+    const styledMessage = chalk.bgGreen.black(data);
+    console.log(styledMessage)
+});
 
-// const styledMessage = figlet.bgGreen.byGreen(greet('Xola'));
-// console.log(styledMessage);
+
+
